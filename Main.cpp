@@ -2,6 +2,8 @@
 
 
 #include <iostream>
+#include <vector>
+#include <thread>
 #include "ConsoleLog.h"
 
 
@@ -20,9 +22,9 @@ void operator delete[](void* p, std::size_t s) noexcept { clog("( d[]", p, s, ")
 int main(int argc, char* argv[])
 {
     clog("{");
-    int v;
-    std::cout << "test " << &v << std::endl;
-    std::cout << "test " << &v << std::endl;
+    std::vector<std::thread> at(std::thread::hardware_concurrency());
+    for (auto& t : at) t = std::thread([]{ int v; std::cout << "test " << &v << std::endl; });
+    for (auto& t : at) t.join();
     clog("}");
     return 0;
 }

@@ -1,7 +1,7 @@
-# stdout.OperationCheck
-標準出力の動作確認
-* Msvc
-  * 値の展開にnew/deleteを使用する
-  * トークン毎に同期
-* g++
-  * トークン毎に同期
+# iostream.OperationCheck
+iostreamの動作確認
+||トークン毎に同期|値の展開にnew/deleteを使用|
+|-|:-:|:-:|
+|Msvc|yes|yes|
+|clang++|yes|no|
+|g++|yes|no|
