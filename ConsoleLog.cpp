@@ -16,16 +16,16 @@ void ConsoleLog::Out() const noexcept               { std::puts(ma); std::fflush
 
 void ConsoleLog::Put() noexcept                     { Tail(std::snprintf(Tail(), Size(), " ")); }
 void ConsoleLog::Put(bool v) noexcept               { Tail(std::snprintf(Tail(), Size(), "%d", (v)? 1:0)); }
-void ConsoleLog::Put(signed char v) noexcept        { Tail(std::snprintf(Tail(), Size(), "%hhd", v)); }
-void ConsoleLog::Put(signed short v) noexcept       { Tail(std::snprintf(Tail(), Size(), "%hd", v)); }
-void ConsoleLog::Put(signed int v) noexcept         { Tail(std::snprintf(Tail(), Size(), "%d", v)); }
-void ConsoleLog::Put(signed long long v) noexcept   { Tail(std::snprintf(Tail(), Size(), "%lld", v)); }
-void ConsoleLog::Put(unsigned char v) noexcept      { Tail(std::snprintf(Tail(), Size(), "%hhu", v)); }
-void ConsoleLog::Put(unsigned short v) noexcept     { Tail(std::snprintf(Tail(), Size(), "%hu", v)); }
-void ConsoleLog::Put(unsigned int v) noexcept       { Tail(std::snprintf(Tail(), Size(), "%u", v)); }
-void ConsoleLog::Put(unsigned long long v) noexcept { Tail(std::snprintf(Tail(), Size(), "%llu", v)); }
-void ConsoleLog::Put(float v) noexcept              { Tail(std::snprintf(Tail(), Size(), "%f", v)); }
-void ConsoleLog::Put(double v) noexcept             { Tail(std::snprintf(Tail(), Size(), "%f", v)); }
+void ConsoleLog::Put(i8 v) noexcept                 { Tail(std::snprintf(Tail(), Size(), I8, v)); }
+void ConsoleLog::Put(i16 v) noexcept                { Tail(std::snprintf(Tail(), Size(), I16, v)); }
+void ConsoleLog::Put(i32 v) noexcept                { Tail(std::snprintf(Tail(), Size(), I32, v)); }
+void ConsoleLog::Put(i64 v) noexcept                { Tail(std::snprintf(Tail(), Size(), I64, v)); }
+void ConsoleLog::Put(u8 v) noexcept                 { Tail(std::snprintf(Tail(), Size(), U8, v)); }
+void ConsoleLog::Put(u16 v) noexcept                { Tail(std::snprintf(Tail(), Size(), U16, v)); }
+void ConsoleLog::Put(u32 v) noexcept                { Tail(std::snprintf(Tail(), Size(), U32, v)); }
+void ConsoleLog::Put(u64 v) noexcept                { Tail(std::snprintf(Tail(), Size(), U64, v)); }
+void ConsoleLog::Put(float v) noexcept              { Tail(std::snprintf(Tail(), Size(), F32, v)); }
+void ConsoleLog::Put(double v) noexcept             { Tail(std::snprintf(Tail(), Size(), F64, v)); }
 void ConsoleLog::Put(const char* v) noexcept        { Tail(std::snprintf(Tail(), Size(), "%s", (v)? v:"")); }
 void ConsoleLog::Put(const void* v) noexcept        { Tail(std::snprintf(Tail(), Size(), "%p", v)); }
 void ConsoleLog::Put(const std::string& v) noexcept { Tail(std::snprintf(Tail(), Size(), "%s", v.c_str())); }

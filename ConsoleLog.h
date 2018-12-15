@@ -5,6 +5,7 @@
 
 
 #include <string>
+#include "./Type.h"
 
 
 
@@ -18,16 +19,16 @@ class ConsoleLog {
         
         void Put() noexcept;
         void Put(bool v) noexcept;
-        void Put(signed char v) noexcept;
-        void Put(signed short v) noexcept;
-        void Put(signed int v) noexcept;
-        void Put(signed long long v) noexcept;
-        void Put(unsigned char v) noexcept;
-        void Put(unsigned short v) noexcept;
-        void Put(unsigned int v) noexcept;
-        void Put(unsigned long long v) noexcept;
-        void Put(float v) noexcept;
-        void Put(double v) noexcept;
+        void Put(i8 v) noexcept;
+        void Put(i16 v) noexcept;
+        void Put(i32 v) noexcept;
+        void Put(i64 v) noexcept;
+        void Put(u8 v) noexcept;
+        void Put(u16 v) noexcept;
+        void Put(u32 v) noexcept;
+        void Put(u64 v) noexcept;
+        void Put(f32 v) noexcept;
+        void Put(f64 v) noexcept;
         void Put(const char* v) noexcept;
         void Put(const void* v) noexcept;
         void Put(const std::string& v) noexcept;
