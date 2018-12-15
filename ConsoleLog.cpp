@@ -15,7 +15,7 @@ ConsoleLog::ConsoleLog()                            :mp(ma){}
 void ConsoleLog::Out() const noexcept               { std::puts(ma); std::fflush(stdout); }
 
 void ConsoleLog::Put() noexcept                     { Tail(std::snprintf(Tail(), Size(), " ")); }
-void ConsoleLog::Put(bool v) noexcept               { Tail(std::snprintf(Tail(), Size(), "%hhd", (v)? 1:0)); }
+void ConsoleLog::Put(bool v) noexcept               { Tail(std::snprintf(Tail(), Size(), "%d", (v)? 1:0)); }
 void ConsoleLog::Put(signed char v) noexcept        { Tail(std::snprintf(Tail(), Size(), "%hhd", v)); }
 void ConsoleLog::Put(signed short v) noexcept       { Tail(std::snprintf(Tail(), Size(), "%hd", v)); }
 void ConsoleLog::Put(signed int v) noexcept         { Tail(std::snprintf(Tail(), Size(), "%d", v)); }
