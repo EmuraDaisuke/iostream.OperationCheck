@@ -1,7 +1,7 @@
 # iostream.OperationCheck
 iostreamの動作確認
 
-||トークン毎に同期|値の展開にnew/deleteを使用|
+||トークン毎に排他制御|値の展開にnew/deleteを使用|
 |-|:-:|:-:|
 |Msvc|yes|yes|
 |clang++|yes|no|
