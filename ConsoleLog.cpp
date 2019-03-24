@@ -1,5 +1,3 @@
-// Copyright(c) 2018 Emura Daisuke
-// Apache License 2.0
 
 
 
